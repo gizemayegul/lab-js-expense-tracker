@@ -13,10 +13,8 @@ class Entry {
 // Income
 class Income extends Entry {
   constructor(date, amount, description) {
+    // it takes the constructor arguments from entry
     super(date, amount, description);
-    this.date = date;
-    this.amount = amount;
-    this.description = description;
     this.type = "income";
   }
 }
@@ -25,10 +23,7 @@ class Income extends Entry {
 class Expense extends Entry {
   constructor(date, amount, description, paid) {
     super(date, amount, description);
-    this.date = date;
-    this.amount = amount;
-    this.description = description;
-    this.paid = paid;
+    this.paid = paid; // true or false
     this.type = "expense";
   }
 
